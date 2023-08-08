@@ -22,6 +22,16 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: repeating-conic-gradient(
+    from 45deg,
+    #ff2770 0%,
+    #ff2770 5%,
+    transparent 5%,
+    transparent 35%,
+    #ff2770 50%
+  );
+  animation: animate 4s linear infinite;
+  border-radius: 20px;
 }
 
 .box form {
@@ -54,4 +64,32 @@ body {
 
 .box form input::placeholder {
   color: rgba(255, 255, 255, 0.5);
+}
+
+.box form input[type="submit"] {
+  font-weight: 600;
+  background: #fff;
+  color: #2d2d39;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.box form input[type="submit"]:hover {
+  background: #ff2770;
+}
+
+.box form .group {
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.box form .group a {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+}
+
+.box form .group a:last-child {
+  color: #45f3ff;
+  font-weight: 500;
 }
